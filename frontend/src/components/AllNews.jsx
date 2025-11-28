@@ -42,7 +42,7 @@ export default function AllNews({ userProfile, onLoginClick }) {
       try {
         // Fetch summarized news from backend (DB-first endpoint)
         const resp = await fetch(
-          `${import.meta.env.VITE_API_BASE || "http://localhost:4000"
+          `${import.meta.env.VITE_BACKEND_API_URL || "http://localhost:4000"
           }/get-summarized-news`
         );
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
